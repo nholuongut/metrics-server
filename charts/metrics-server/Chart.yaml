@@ -1,0 +1,31 @@
+apiVersion: v2
+name: metrics-server
+description: Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
+type: application
+version: 3.12.2
+appVersion: 0.7.2
+keywords:
+  - kubernetes
+  - metrics-server
+  - metrics
+home: https://github.com/nholuongut/metrics-server
+icon: https://avatars.githubusercontent.com/u/36015203?s=400&v=4
+sources:
+  - https://github.com/nholuongut/metrics-server
+maintainers:
+  - name: stevehipwell
+    url: https://github.com/stevehipwell
+  - name: krmichel
+    url: https://github.com/krmichel
+  - name: endrec
+    url: https://github.com/endrec
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: "Explicitly added the app protocol to the service."
+    - kind: changed
+      description: "Updated the _Metrics Server_ OCI image to [v0.7.2](https://github.com/nholuongut/metrics-server/releases/tag/v0.7.2)."
+    - kind: changed
+      description: "Updated the _addonResizer_ OCI image to [1.8.21](https://github.com/nholuongut/autoscaler/releases/tag/addon-resizer-1.8.21)"
+    - kind: fixed
+      description: "Fixed nanny's RoleBinding which contained a hard-coded namespace instead of the Helm's release namespace."
